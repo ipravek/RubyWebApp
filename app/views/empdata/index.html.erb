@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<h1>Employee Data</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Designation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @empdata.each do |empdatum| %>
+      <tr>
+        <td><%= empdatum.name %></td>
+        <td><%= empdatum.age %></td>
+        <td><%= empdatum.gender %></td>
+        <td><%= empdatum.designation %></td>
+        <td><%= link_to 'Show', empdatum, class:"btn btn-secondary" %></td>
+        <td><%= link_to 'Edit', edit_empdatum_path(empdatum), class:"btn btn-secondary" %></td>
+        <td><%= link_to 'Destroy', empdatum, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-secondary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div>
+<br>
+
+<%= link_to 'Add New', new_empdatum_path, class:"btn btn-secondary" %>

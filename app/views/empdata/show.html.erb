@@ -1,0 +1,19 @@
+<div class="alert alert-success " role="alert" id="notice"><%= notice %></div>
+
+<div class="container">
+<div class="container-card">
+<div class="card text-center">
+  <div class="card-header">Employee Data</div>
+  <div class="card-body">
+    <h2 class="card-title"><%= @empdatum.name %></h2>
+    <h5><%= @empdatum.designation %></h5>
+    <p class="card-text">
+    <%= @empdatum.age %> / <%= @empdatum.gender %>
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+  <%= link_to 'Edit', edit_empdatum_path(@empdatum), class:"btn btn-primary" %> <%= link_to 'Back', empdata_path, class:"btn btn-primary" %>
+  </div>
+</div>
+</div>
+</div>

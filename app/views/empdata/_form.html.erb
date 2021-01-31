@@ -1,0 +1,38 @@
+<%= form_with(model: empdatum) do |form| %>
+  <% if empdatum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(empdatum.errors.count, "error") %> prohibited this empdatum from being saved:</h2>
+
+      <ul>
+        <% empdatum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.text_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :designation %>
+    <%= form.text_field :designation %>
+  </div>
+
+  <div class="actions">
+  <button class="btn btn-primary"
+  value="<%= form.submit %>">Create New Employee</button>
+  </div>
+<% end %>
