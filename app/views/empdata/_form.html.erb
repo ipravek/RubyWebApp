@@ -1,3 +1,5 @@
+
+<div style="width: 340px" >
 <%= form_with(model: empdatum) do |form| %>
   <% if empdatum.errors.any? %>
     <div id="error_explanation">
@@ -11,28 +13,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field form-group">
+    <%= form.text_field :name, class:"form-control", placeholder:"Name" %>
+    <br/>
   </div>
 
-  <div class="field">
-    <%= form.label :age %>
-    <%= form.text_field :age %>
+  <div class="field form-group">
+    <%= form.text_field :age, class:"form-control",placeholder:"Age" %>
+    <br/>
   </div>
 
-  <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender %>
+  <div class="field form-group">
+    <%= form.text_field :gender, class:"form-control",placeholder:"Gender" %>
+    <br/>
   </div>
 
-  <div class="field">
-    <%= form.label :designation %>
-    <%= form.text_field :designation %>
+  <div class="field form-group">
+    <%= form.text_field :designation, class:"form-control",placeholder:"Designation" %>
+    <br/>
   </div>
 
   <div class="actions">
-  <button class="btn btn-primary"
-  value="<%= form.submit %>">Create New Employee</button>
+  <%= form.submit class:"btn btn-primary"%>
   </div>
 <% end %>
+<br/>
+</div>
